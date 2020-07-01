@@ -40,3 +40,21 @@ function evenItems(arr) {
 }
 
 evenItems(array1);
+
+// 3. Функция принимает массив и возвращает сумму всех элементов массива.
+console.log('3. Функция принимает массив и возвращает сумму всех элементов массива.');
+
+/**
+ *
+ * @param {Array} arr
+ * @returns {number}
+ */
+function sumElements(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+console.log(sumElements(array1));
