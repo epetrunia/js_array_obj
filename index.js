@@ -117,3 +117,12 @@ function deleteElement(arr, index) {
 
 deleteElement(array1, 3);
 console.log(`Element in index 3 has been deleted: ${array1}`);
+
+// Задание 2
+// Создать еще один массив из 5 случайных чисел и написать следующие функции.
+
+const array2 = [];
+
+for (let i = 0; i < 5; i++) {
+    array2.push(Math.round(Math.random() * 100));
+}
