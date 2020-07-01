@@ -58,3 +58,23 @@ function sumElements(arr) {
 }
 
 console.log(sumElements(array1));
+
+// 4. Функция принимает массив и возвращает его максимальный элемент.
+console.log('4. Функция принимает массив и возвращает его максимальный элемент.');
+
+/**
+ *
+ * @param {Array} arr
+ * @returns {number}
+ */
+function maxElement(arr) {
+    let max = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+console.log(maxElement(array1));
