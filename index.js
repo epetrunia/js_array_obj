@@ -78,3 +78,25 @@ function maxElement(arr) {
 }
 
 console.log(maxElement(array1));
+
+// 5. Функция добавления нового элемента в массив по указанному индексу.
+console.log('5. Функция добавления нового элемента в массив по указанному индексу.');
+
+/**
+ *
+ * @param {Array} arr - base array
+ * @param {number} index - expected place for new element
+ * @param {number} element - new element
+ */
+function addElement(arr, index, element) {
+    for (let i = arr.length; i >= 0; i--) {
+        if (i > index) {
+            arr[i] = arr[i - 1];
+        } else if (i === index) {
+            arr[i] = element;
+        }
+    }
+}
+
+addElement(array1, 2, 10);
+console.log(`Element '10' has been added in index 2: ${array1}`);
