@@ -126,3 +126,20 @@ const array2 = [];
 for (let i = 0; i < 5; i++) {
     array2.push(Math.round(Math.random() * 100));
 }
+
+// 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из двух массивов без повторений.
+console.log('Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из двух массивов без повторений.');
+
+/**
+ *
+ * @param {Array} arr1 - fist array
+ * @param {Array} arr2 - second array
+ * @returns {Array} - new array with unique elements from arr1 & arr2
+ */
+function mergeArrays(arr1, arr2) {
+    const arr3 = arr1.concat(arr2);
+    const uniqueSet = new Set(arr3);
+    return [...uniqueSet];
+}
+
+console.log(mergeArrays(array1, array2));
