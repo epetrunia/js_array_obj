@@ -158,7 +158,7 @@ function intersectionArrays(arr1, arr2) {
     let arr3 = [];
     let flag = 0;
 
-    for(let i = 0; i < arr2.length; i++) {
+    for (let i = 0; i < arr2.length; i++) {
         flag = arr1.indexOf(arr2[i]);
         if (flag >= 0) {
             arr3.push(arr2[i]);
@@ -168,3 +168,27 @@ function intersectionArrays(arr1, arr2) {
 }
 
 console.log(intersectionArrays(array1, array2));
+
+// 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из первого массива, которых нет во втором массиве.
+console.log('3. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из первого массива, которых нет во втором массиве.');
+
+/**
+ *
+ * @param {Array} arr1 - fist array
+ * @param {Array} arr2 - second array
+ * @returns {Array} - new array with elements from first which are absent in second
+ */
+function differenceArrays(arr1, arr2) {
+    let arr3 = [];
+    let flag = 0;
+
+    for (let i = 0; i < arr1.length; i++) {
+        flag = arr2.indexOf(arr1[i]);
+        if (flag < 0) {
+            arr3.push(arr1[i]);
+        }
+    }
+    return arr3;
+}
+
+console.log(differenceArrays(array1, array2));
