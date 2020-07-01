@@ -126,6 +126,7 @@ const array2 = [];
 for (let i = 0; i < 5; i++) {
     array2.push(Math.round(Math.random() * 100));
 }
+console.log(array2);
 
 // 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из двух массивов без повторений.
 console.log('Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из двух массивов без повторений.');
@@ -143,3 +144,27 @@ function mergeArrays(arr1, arr2) {
 }
 
 console.log(mergeArrays(array1, array2));
+
+//2. Функция принимает 2 массива и возвращает новый массив, в котором собраны общие элементы (то есть элементы, которые встречаются и в первом и во втором массивах) без повторений.
+console.log('Функция принимает 2 массива и возвращает новый массив, в котором собраны общие элементы (то есть элементы, которые встречаются и в первом и во втором массивах) без повторений.');
+
+/**
+ *
+ * @param {Array} arr1 - fist array
+ * @param {Array} arr2 - second array
+ * @returns {Array} - new array with common elements from first and second arrays
+ */
+function intersectionArrays(arr1, arr2) {
+    let arr3 = [];
+    let flag = 0;
+
+    for(let i = 0; i < arr2.length; i++) {
+        flag = arr1.indexOf(arr2[i]);
+        if (flag >= 0) {
+            arr3.push(arr2[i]);
+        }
+    }
+    return arr3;
+}
+
+console.log(intersectionArrays(array1, array2));
