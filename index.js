@@ -24,3 +24,19 @@ function displayArray(arr) {
 
 displayArray(array1);
 
+// 2. Функция принимает массив и выводит только четные элементы.
+console.log('2. Функция принимает массив и выводит только четные элементы.');
+
+/**
+ *
+ * @param arr
+ */
+function evenItems(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            console.log(arr[i]);
+        }
+    }
+}
+
+evenItems(array1);
