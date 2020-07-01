@@ -100,3 +100,20 @@ function addElement(arr, index, element) {
 
 addElement(array1, 2, 10);
 console.log(`Element '10' has been added in index 2: ${array1}`);
+
+// 6. Функция удаления элемента из массива по указанному индексу.
+console.log('6. Функция удаления элемента из массива по указанному индексу.');
+
+
+function deleteElement(arr, index) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (i >= index) {
+            arr[i] = arr[i + 1];
+        }
+    }
+    delete arr[arr.length - 1];
+    arr.length -= 1;
+}
+
+deleteElement(array1, 3);
+console.log(`Element in index 3 has been deleted: ${array1}`);
