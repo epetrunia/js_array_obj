@@ -104,7 +104,11 @@ console.log(`Element '10' has been added in index 2: ${array1}`);
 // 6. Функция удаления элемента из массива по указанному индексу.
 console.log('6. Функция удаления элемента из массива по указанному индексу.');
 
-
+/**
+ *
+ * @param {Array} arr - base array
+ * @param {number} index - index of deleted element
+ */
 function deleteElement(arr, index) {
     for (let i = 0; i < arr.length - 1; i++) {
         if (i >= index) {
