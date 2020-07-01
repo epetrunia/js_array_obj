@@ -14,7 +14,7 @@ console.log('1. Функция принимает массив и выводит
 
 /**
  *
- * @param arr
+ * @param {Array} arr
  */
 function displayArray(arr) {
     for (let i = 0; i < arr.length; i++) {
@@ -29,7 +29,7 @@ console.log('2. Функция принимает массив и выводит
 
 /**
  *
- * @param arr
+ * @param {Array} arr
  */
 function evenItems(arr) {
     for (let i = 0; i < arr.length; i++) {
